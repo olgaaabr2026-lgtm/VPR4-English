@@ -1,0 +1,1297 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1B5FA8">
+<title>ВПР Английский 4 класс · Полный справочник</title>
+<style>
+:root{
+  --blue:#1B5FA8;--lblue:#E6F1FB;--bt:#0C447C;
+  --teal:#0F6E56;--lteal:#E1F5EE;--tt:#085041;
+  --purp:#534AB7;--lpurp:#EEEDFE;--pt:#3C3489;
+  --pink:#993556;--lpink:#FBEAF0;
+  --grn:#3B6D11;--lgrn:#EAF3DE;--gt:#27500A;
+  --amb:#BA7517;--lamb:#FAEEDA;--at:#633806;
+  --red:#A32D2D;--lred:#FCEBEB;
+  --orn:#B84A00;--lorn:#FEF0E6;
+  --gray:#F5F4F0;--mg:#888780;--dk:#2C2C2A;
+  --r:12px;--sb:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;background:#f2f1ec;color:var(--dk);padding-bottom:calc(68px + var(--sb))}
+
+/* ── Topbar ── */
+.tb{background:var(--blue);color:#fff;padding:12px 16px 10px;position:sticky;top:0;z-index:200;display:flex;align-items:center;gap:10px}
+.tb h1{font-size:16px;font-weight:600;flex:1;line-height:1.2}
+.tb span{font-size:11px;opacity:.7;white-space:nowrap}
+
+/* ── Bottom nav ── */
+.bn{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;padding:0 0 var(--sb);z-index:200;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.bn::-webkit-scrollbar{display:none}
+.bn button{flex:0 0 auto;min-width:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px 9px;font-size:10px;color:var(--mg);background:none;border:none;cursor:pointer;gap:2px;font-family:inherit;white-space:nowrap;transition:color .15s}
+.bn button.active{color:var(--blue)}
+.bn button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
+
+/* ── Pages ── */
+.pg{display:none;padding:12px 12px 10px}
+.pg.active{display:block;animation:fi .2s ease}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── Chips ── */
+.chip{display:inline-block;color:#fff;padding:5px 13px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:11px}
+
+/* ── Cards ── */
+.card{background:#fff;border-radius:var(--r);padding:13px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.ct{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:9px}
+
+/* ── Vocab list ── */
+.vl{list-style:none}
+.vl li{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid #f0efe8;font-size:14px;gap:6px}
+.vl li:last-child{border-bottom:none}
+.en{font-weight:600;color:var(--blue);flex:1;min-width:0;font-size:13.5px}
+.ru{color:var(--mg);text-align:right;font-size:13px;flex-shrink:0;max-width:52%}
+
+/* ── Rule boxes ── */
+.rule{padding:10px 13px;border-radius:9px;font-size:13px;line-height:1.65;margin:7px 0}
+.rule b{font-weight:600}
+.rb{background:var(--lblue);color:var(--bt);border-left:3px solid var(--blue)}
+.rt{background:var(--lteal);color:var(--tt);border-left:3px solid var(--teal)}
+.rp{background:var(--lpurp);color:var(--pt);border-left:3px solid var(--purp)}
+.rg{background:var(--lgrn);color:var(--gt);border-left:3px solid var(--grn)}
+.ra{background:var(--lamb);color:var(--at);border-left:3px solid var(--amb)}
+.rr{background:var(--lred);color:var(--red);border-left:3px solid var(--red)}
+.ro{background:var(--lorn);color:var(--orn);border-left:3px solid var(--orn)}
+
+/* ── Grammar tables ── */
+.gt{width:100%;border-collapse:collapse;font-size:12.5px;margin:7px 0}
+.gt th{background:var(--gray);font-weight:600;padding:6px 7px;text-align:left;border:1px solid #ddd;font-size:12px}
+.gt td{padding:5px 7px;border:1px solid #eee;vertical-align:top;line-height:1.5}
+.gt tr:nth-child(even) td{background:#fafaf8}
+
+/* ── Number grid ── */
+.ng{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:7px 0}
+.nc{background:var(--gray);border-radius:7px;text-align:center;padding:6px 2px}
+.nc .n{font-weight:700;font-size:15px}
+.nc .w{font-size:11px;color:var(--mg);margin-top:1px}
+
+/* ── Accordion ── */
+.acc{margin-bottom:8px}
+.ah{background:#fff;border-radius:var(--r);padding:13px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.07);user-select:none}
+.ah.op{border-radius:var(--r) var(--r) 0 0;box-shadow:none;border-bottom:1px solid #eee}
+.at2{font-size:14px;font-weight:600;line-height:1.3}
+.as{font-size:11.5px;color:var(--mg);margin-top:2px}
+.arr{color:var(--mg);font-size:17px;transition:transform .2s;flex-shrink:0;margin-left:8px}
+.ah.op .arr{transform:rotate(180deg)}
+.ab{display:none;background:#fff;border-radius:0 0 var(--r) var(--r);padding:0 13px 13px;box-shadow:0 2px 4px rgba(0,0,0,.06)}
+.ab.op{display:block}
+
+/* ── Day cards ── */
+.dc{border-radius:var(--r);overflow:hidden;margin-bottom:9px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.dh{padding:10px 13px;color:#fff;font-size:13px;font-weight:600;display:flex;gap:10px;align-items:baseline}
+.dh span:first-child{font-size:11px;opacity:.85;white-space:nowrap}
+.dr{display:grid;grid-template-columns:76px 1fr;font-size:13px;border-top:1px solid rgba(0,0,0,.06)}
+.di{padding:7px 9px;font-weight:600;font-size:12px;color:#555;background:rgba(0,0,0,.03)}
+.dtx{padding:7px 10px}
+
+/* ── Quiz items ── */
+.qi{background:#fff;border-radius:var(--r);margin-bottom:9px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.qq{background:var(--gray);padding:10px 13px;font-weight:600;font-size:14px}
+.qo{padding:9px 13px;font-size:13px;border-top:1px solid #eee;display:flex;align-items:center;gap:7px}
+.qo.ok{background:var(--lgrn);color:var(--gt);font-weight:600}
+.ck{width:17px;height:17px;border-radius:50%;border:1.5px solid #ccc;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px}
+.ck.y{background:var(--grn);border-color:var(--grn);color:#fff}
+.qn{background:var(--lamb);padding:7px 13px;font-size:12px;color:var(--at);border-top:1px solid #e8d9b8}
+
+/* ── Section label ── */
+.sl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mg);margin:10px 0 5px}
+
+/* ── Score badge ── */
+.score-row{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.badge{padding:5px 11px;border-radius:20px;font-size:12px;font-weight:600}
+
+/* ── Final banner ── */
+.fin{background:var(--blue);color:#fff;text-align:center;padding:15px;border-radius:var(--r);font-size:15px;font-weight:600;margin-top:14px}
+
+/* ── Responsive ── */
+@media(max-width:380px){.en{font-size:12.5px}.ru{font-size:12px;max-width:48%}}
+</style>
+</head>
+<body>
+
+<div class="tb">
+  <h1>ВПР · Английский · 4 класс</h1>
+  <span>Полный справочник 2026</span>
+</div>
+
+<!-- ══════════════════ BOTTOM NAV ══════════════════ -->
+<nav class="bn">
+  <button onclick="go('main')" id="tb-main" class="active">
+    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Главная
+  </button>
+  <button onclick="go('words')" id="tb-words">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Слова
+  </button>
+  <button onclick="go('gram')" id="tb-gram">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Грамматика
+  </button>
+  <button onclick="go('nums')" id="tb-nums">
+    <svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>Числа
+  </button>
+  <button onclick="go('task4')" id="tb-task4">
+    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Анкета
+  </button>
+  <button onclick="go('test')" id="tb-test">
+    <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Тест
+  </button>
+  <button onclick="go('plan')" id="tb-plan">
+    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>План
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     ГЛАВНАЯ
+══════════════════════════════════════════════════════ -->
+<div id="pg-main" class="pg active">
+  <div class="card" style="background:var(--blue);color:#fff;margin-bottom:10px">
+    <div style="font-size:20px;font-weight:700;margin-bottom:4px">ВПР · Английский · 4 класс</div>
+    <div style="font-size:13px;opacity:.8">Московская область · 2026 · Полный справочник</div>
+  </div>
+  <div class="card">
+    <div class="ct" style="color:var(--amb)">Структура ВПР 2026</div>
+    <table class="gt">
+      <tr><th>№</th><th>Что проверяется</th><th>Баллы</th></tr>
+      <tr><td><b>1</b></td><td>Аудирование — понимание на слух</td><td><b>5</b></td></tr>
+      <tr><td><b>2</b></td><td>Чтение — понимание текста</td><td><b>5</b></td></tr>
+      <tr><td><b>3</b></td><td>Грамматика — заполни пропуски</td><td><b>5</b></td></tr>
+      <tr><td><b>4</b></td><td>Анкета / письмо (личные данные)</td><td><b>10</b></td></tr>
+    </table>
+    <div class="rule ra" style="margin-top:10px">«5» = 22–25 б. &nbsp;|&nbsp; «4» = 15–21 б. &nbsp;|&nbsp; «3» = 10–14 б. &nbsp;|&nbsp; «2» = 0–9 б.</div>
+  </div>
+  <div class="card">
+    <div class="ct" style="color:var(--blue)">Навигация по справочнику</div>
+    <div class="rule rb">📚 <b>Слова</b> — 18 тем: семья, школа, предметы, питомцы, еда/напитки, хобби/спорт, профессии, внешность/характер, погода, страны, дом/мебель, части тела, одежда, транспорт, город, праздники, цвета, время</div>
+    <div class="rule rp" style="margin-top:6px">📐 <b>Грамматика</b> — 17 тем: все времена, артикли, предлоги, местоимения, степени сравнения, there is/are, some/any, модальные глаголы, притяжательный падеж и др.</div>
+    <div class="rule ra" style="margin-top:6px">✍️ <b>Анкета</b> — образец Задания 4 (10 баллов), шаблонные фразы</div>
+    <div class="rule rg" style="margin-top:6px">📅 <b>План</b> — 5 дней подготовки, советы, рекомендации на день ВПР</div>
+  </div>
+  <div class="card">
+    <div class="ct" style="color:var(--grn)">Советы на ВПР</div>
+    <div class="rule rg">Сначала читай <b>задание</b>, потом текст. Не оставляй пустых строк.</div>
+    <div class="rule rg" style="margin-top:6px">Задание 4: каждое поле — с <b>заглавной буквы</b>. Страна: <b>Russia</b> (без артикля).</div>
+    <div class="rule rg" style="margin-top:6px">Не знаешь слово — угадывай по контексту. Языковая догадка работает!</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     СЛОВА
+══════════════════════════════════════════════════════ -->
+<div id="pg-words" class="pg">
+  <span class="chip" style="background:var(--blue)">1. Вся лексика · 18 тем</span>
+
+  <div class="acc" id="a-family">
+    <div class="ah op" onclick="tog('a-family')"><div><div class="at2">Семья · Family</div><div class="as">12 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab op"><ul class="vl">
+      <li><span class="en">mother / mum</span><span class="ru">мама</span></li>
+      <li><span class="en">father / dad</span><span class="ru">папа</span></li>
+      <li><span class="en">brother / sister</span><span class="ru">брат / сестра</span></li>
+      <li><span class="en">grandmother / granny</span><span class="ru">бабушка</span></li>
+      <li><span class="en">grandfather / grandpa</span><span class="ru">дедушка</span></li>
+      <li><span class="en">aunt / uncle</span><span class="ru">тётя / дядя</span></li>
+      <li><span class="en">cousin</span><span class="ru">двоюродный брат/сестра</span></li>
+      <li><span class="en">husband / wife</span><span class="ru">муж / жена</span></li>
+      <li><span class="en">son / daughter</span><span class="ru">сын / дочь</span></li>
+      <li><span class="en">parents</span><span class="ru">родители</span></li>
+    </ul></div>
+  </div>
+
+  <div class="acc" id="a-school">
+    <div class="ah" onclick="tog('a-school')"><div><div class="at2">Школа · School</div><div class="as">12 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">school / classroom</span><span class="ru">школа / класс</span></li>
+      <li><span class="en">lesson / class</span><span class="ru">урок</span></li>
+      <li><span class="en">teacher / pupil</span><span class="ru">учитель / ученик</span></li>
+      <li><span class="en">textbook / notebook</span><span class="ru">учебник / тетрадь</span></li>
+      <li><span class="en">pen / pencil</span><span class="ru">ручка / карандаш</span></li>
+      <li><span class="en">bag / backpack</span><span class="ru">сумка / рюкзак</span></li>
+      <li><span class="en">blackboard</span><span class="ru">доска</span></li>
+      <li><span class="en">homework</span><span class="ru">домашнее задание</span></li>
+      <li><span class="en">timetable</span><span class="ru">расписание</span></li>
+    </ul></div>
+  </div>
+
+  <div class="acc" id="a-subj">
+    <div class="ah" onclick="tog('a-subj')"><div><div class="at2">Школьные предметы · Subjects</div><div class="as">12 предметов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">English</span><span class="ru">английский язык</span></li>
+      <li><span class="en">Maths</span><span class="ru">математика</span></li>
+      <li><span class="en">Russian</span><span class="ru">русский язык</span></li>
+      <li><span class="en">Science</span><span class="ru">природоведение</span></li>
+      <li><span class="en">Art</span><span class="ru">рисование</span></li>
+      <li><span class="en">Music</span><span class="ru">музыка</span></li>
+      <li><span class="en">PE (Physical Education)</span><span class="ru">физкультура</span></li>
+      <li><span class="en">History</span><span class="ru">история</span></li>
+      <li><span class="en">Geography</span><span class="ru">география</span></li>
+      <li><span class="en">IT / Computer Science</span><span class="ru">информатика</span></li>
+      <li><span class="en">Literature</span><span class="ru">литература</span></li>
+      <li><span class="en">Technology</span><span class="ru">технология</span></li>
+    </ul></div>
+  </div>
+
+  <div class="acc" id="a-pets">
+    <div class="ah" onclick="tog('a-pets')"><div><div class="at2">Животные и питомцы · Pets</div><div class="as">17 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Домашние питомцы</div>
+      <ul class="vl">
+        <li><span class="en">cat / dog</span><span class="ru">кошка / собака</span></li>
+        <li><span class="en">rabbit / hamster</span><span class="ru">кролик / хомяк</span></li>
+        <li><span class="en">parrot / goldfish</span><span class="ru">попугай / золотая рыбка</span></li>
+        <li><span class="en">turtle / guinea pig</span><span class="ru">черепаха / морская свинка</span></li>
+      </ul>
+      <div class="sl">Дикие животные</div>
+      <ul class="vl">
+        <li><span class="en">lion / tiger</span><span class="ru">лев / тигр</span></li>
+        <li><span class="en">elephant / bear</span><span class="ru">слон / медведь</span></li>
+        <li><span class="en">fox / wolf</span><span class="ru">лиса / волк</span></li>
+        <li><span class="en">horse / cow</span><span class="ru">лошадь / корова</span></li>
+        <li><span class="en">bird / duck</span><span class="ru">птица / утка</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-food">
+    <div class="ah" onclick="tog('a-food')"><div><div class="at2">Еда и напитки · Food & Drinks</div><div class="as">18 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Еда</div>
+      <ul class="vl">
+        <li><span class="en">bread / butter / rice</span><span class="ru">хлеб / масло / рис</span></li>
+        <li><span class="en">soup / salad / pizza</span><span class="ru">суп / салат / пицца</span></li>
+        <li><span class="en">apple / banana / fruit</span><span class="ru">яблоко / банан / фрукты</span></li>
+        <li><span class="en">vegetables / meat</span><span class="ru">овощи / мясо</span></li>
+        <li><span class="en">cake / ice cream</span><span class="ru">торт / мороженое</span></li>
+        <li><span class="en">breakfast / lunch / dinner</span><span class="ru">завтрак / обед / ужин</span></li>
+      </ul>
+      <div class="sl">Напитки</div>
+      <ul class="vl">
+        <li><span class="en">water / milk</span><span class="ru">вода / молоко</span></li>
+        <li><span class="en">juice / tea / coffee</span><span class="ru">сок / чай / кофе</span></li>
+        <li><span class="en">lemonade / hot chocolate</span><span class="ru">лимонад / горячий шоколад</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-hobby">
+    <div class="ah" onclick="tog('a-hobby')"><div><div class="at2">Хобби и спорт · Hobbies & Sport</div><div class="as">16 фраз</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Хобби</div>
+      <ul class="vl">
+        <li><span class="en">read books / draw / paint</span><span class="ru">читать / рисовать</span></li>
+        <li><span class="en">dance / sing</span><span class="ru">танцевать / петь</span></li>
+        <li><span class="en">watch TV</span><span class="ru">смотреть телевизор</span></li>
+        <li><span class="en">play computer games</span><span class="ru">играть в компьютерные игры</span></li>
+        <li><span class="en">take photos / cook</span><span class="ru">фотографировать / готовить</span></li>
+      </ul>
+      <div class="sl">Спорт</div>
+      <ul class="vl">
+        <li><span class="en">play football / basketball</span><span class="ru">футбол / баскетбол</span></li>
+        <li><span class="en">play tennis</span><span class="ru">играть в теннис</span></li>
+        <li><span class="en">swim / ride a bike</span><span class="ru">плавать / кататься на велосипеде</span></li>
+        <li><span class="en">ski / skate</span><span class="ru">кататься на лыжах / коньках</span></li>
+        <li><span class="en">run / do gymnastics</span><span class="ru">бегать / гимнастика</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-prof">
+    <div class="ah" onclick="tog('a-prof')"><div><div class="at2">Профессии · Professions</div><div class="as">16 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">teacher / doctor</span><span class="ru">учитель / врач</span></li>
+      <li><span class="en">engineer / pilot</span><span class="ru">инженер / лётчик</span></li>
+      <li><span class="en">actor / actress</span><span class="ru">актёр / актриса</span></li>
+      <li><span class="en">artist / scientist</span><span class="ru">художник / учёный</span></li>
+      <li><span class="en">cook / chef</span><span class="ru">повар</span></li>
+      <li><span class="en">policeman / firefighter</span><span class="ru">полицейский / пожарный</span></li>
+      <li><span class="en">programmer / musician</span><span class="ru">программист / музыкант</span></li>
+      <li><span class="en">sportsman / farmer</span><span class="ru">спортсмен / фермер</span></li>
+      <li><span class="en">worker / writer</span><span class="ru">рабочий / писатель</span></li>
+    </ul>
+    <div class="rule rb" style="margin-top:8px"><b>Суффиксы:</b> teach<b>er</b>, act<b>or</b>, art<b>ist</b>, sci<b>entist</b></div>
+    </div>
+  </div>
+
+  <div class="acc" id="a-appear">
+    <div class="ah" onclick="tog('a-appear')"><div><div class="at2">Внешность и характер · Appearance</div><div class="as">20 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Внешность</div>
+      <ul class="vl">
+        <li><span class="en">tall / short</span><span class="ru">высокий / низкий</span></li>
+        <li><span class="en">thin / fat</span><span class="ru">худой / толстый</span></li>
+        <li><span class="en">long / short hair</span><span class="ru">длинные / короткие волосы</span></li>
+        <li><span class="en">curly / straight hair</span><span class="ru">кудрявые / прямые волосы</span></li>
+        <li><span class="en">blonde / dark hair</span><span class="ru">светлые / тёмные волосы</span></li>
+        <li><span class="en">blue / green / brown eyes</span><span class="ru">голубые / зелёные / карие</span></li>
+        <li><span class="en">glasses / beard</span><span class="ru">очки / борода</span></li>
+      </ul>
+      <div class="sl">Характер</div>
+      <ul class="vl">
+        <li><span class="en">kind / friendly</span><span class="ru">добрый / дружелюбный</span></li>
+        <li><span class="en">funny / cheerful</span><span class="ru">смешной / весёлый</span></li>
+        <li><span class="en">clever / smart</span><span class="ru">умный</span></li>
+        <li><span class="en">brave / shy</span><span class="ru">смелый / застенчивый</span></li>
+        <li><span class="en">honest / polite</span><span class="ru">честный / вежливый</span></li>
+        <li><span class="en">lazy / hard-working</span><span class="ru">ленивый / трудолюбивый</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-weather">
+    <div class="ah" onclick="tog('a-weather')"><div><div class="at2">Погода и времена года · Weather</div><div class="as">14 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">spring / summer / autumn / winter</span><span class="ru">весна / лето / осень / зима</span></li>
+      <li><span class="en">It is warm / hot</span><span class="ru">Тепло / жарко</span></li>
+      <li><span class="en">It is cold / cool</span><span class="ru">Холодно / прохладно</span></li>
+      <li><span class="en">It is sunny</span><span class="ru">Солнечно</span></li>
+      <li><span class="en">It is rainy / cloudy</span><span class="ru">Дождливо / облачно</span></li>
+      <li><span class="en">It is snowing / windy</span><span class="ru">Идёт снег / ветрено</span></li>
+      <li><span class="en">weather / forecast</span><span class="ru">погода / прогноз</span></li>
+      <li><span class="en">sun / rain / snow / wind</span><span class="ru">солнце / дождь / снег / ветер</span></li>
+      <li><span class="en">storm / thunder</span><span class="ru">буря / гром</span></li>
+    </ul></div>
+  </div>
+
+  <div class="acc" id="a-country">
+    <div class="ah" onclick="tog('a-country')"><div><div class="at2">Страны и города · Countries</div><div class="as">10 фактов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">Russia — Moscow</span><span class="ru">Россия — Москва</span></li>
+      <li><span class="en">Great Britain — London</span><span class="ru">Великобритания — Лондон</span></li>
+      <li><span class="en">The USA — Washington</span><span class="ru">США — Вашингтон</span></li>
+      <li><span class="en">Australia — Canberra</span><span class="ru">Австралия — Канберра</span></li>
+      <li><span class="en">Canada — Ottawa</span><span class="ru">Канада — Оттава</span></li>
+      <li><span class="en">Big Ben / Tower Bridge</span><span class="ru">Биг Бен / Тауэрский мост</span></li>
+      <li><span class="en">Red Square / Kremlin</span><span class="ru">Красная площадь / Кремль</span></li>
+      <li><span class="en">UK flag: red, white, blue</span><span class="ru">Флаг ВБ: красный, белый, синий</span></li>
+      <li><span class="en">Russian flag: white, blue, red</span><span class="ru">Флаг РФ: белый, синий, красный</span></li>
+      <li><span class="en">I am from Russia.</span><span class="ru">Я из России.</span></li>
+    </ul></div>
+  </div>
+
+  <!-- ── NEW: ДОМ / ТЕЛО / ОДЕЖДА / ТРАНСПОРТ / ГОРОД / ПРАЗДНИКИ ── -->
+  <div class="acc" id="a-house">
+    <div class="ah" onclick="tog('a-house')"><div><div class="at2">Дом и мебель · House & Furniture</div><div class="as">Module 5 · 20 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Комнаты</div>
+      <ul class="vl">
+        <li><span class="en">house / flat / apartment</span><span class="ru">дом / квартира</span></li>
+        <li><span class="en">bedroom</span><span class="ru">спальня</span></li>
+        <li><span class="en">living room</span><span class="ru">гостиная</span></li>
+        <li><span class="en">kitchen / bathroom</span><span class="ru">кухня / ванная</span></li>
+        <li><span class="en">hall / garden</span><span class="ru">прихожая / сад</span></li>
+        <li><span class="en">upstairs / downstairs</span><span class="ru">наверху / внизу</span></li>
+      </ul>
+      <div class="sl">Мебель</div>
+      <ul class="vl">
+        <li><span class="en">bed / sofa / armchair</span><span class="ru">кровать / диван / кресло</span></li>
+        <li><span class="en">table / desk / chair</span><span class="ru">стол / письм. стол / стул</span></li>
+        <li><span class="en">wardrobe / bookcase</span><span class="ru">шкаф / книжный шкаф</span></li>
+        <li><span class="en">carpet / curtains / lamp</span><span class="ru">ковёр / шторы / лампа</span></li>
+        <li><span class="en">fridge / cooker</span><span class="ru">холодильник / плита</span></li>
+        <li><span class="en">TV set / mirror / shelf</span><span class="ru">телевизор / зеркало / полка</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-body">
+    <div class="ah" onclick="tog('a-body')"><div><div class="at2">Части тела · Body Parts</div><div class="as">Module 1 · 16 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Голова</div>
+      <ul class="vl">
+        <li><span class="en">head / face / hair</span><span class="ru">голова / лицо / волосы</span></li>
+        <li><span class="en">eye / ear / nose / mouth</span><span class="ru">глаз / ухо / нос / рот</span></li>
+        <li><span class="en">teeth / tooth</span><span class="ru">зубы / зуб</span></li>
+      </ul>
+      <div class="sl">Тело</div>
+      <ul class="vl">
+        <li><span class="en">neck / shoulder</span><span class="ru">шея / плечо</span></li>
+        <li><span class="en">arm / hand / finger</span><span class="ru">рука / кисть / палец</span></li>
+        <li><span class="en">leg / foot / knee</span><span class="ru">нога / ступня / колено</span></li>
+        <li><span class="en">back / stomach</span><span class="ru">спина / живот</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-clothes">
+    <div class="ah" onclick="tog('a-clothes')"><div><div class="at2">Одежда · Clothes</div><div class="as">Module 8 · 12 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">T-shirt / shirt</span><span class="ru">футболка / рубашка</span></li>
+      <li><span class="en">trousers / jeans</span><span class="ru">брюки / джинсы</span></li>
+      <li><span class="en">dress / skirt</span><span class="ru">платье / юбка</span></li>
+      <li><span class="en">jacket / coat</span><span class="ru">куртка / пальто</span></li>
+      <li><span class="en">jumper / sweater</span><span class="ru">свитер</span></li>
+      <li><span class="en">shoes / boots / trainers</span><span class="ru">туфли / ботинки / кроссовки</span></li>
+      <li><span class="en">socks / hat / cap</span><span class="ru">носки / шляпа / кепка</span></li>
+      <li><span class="en">scarf / gloves</span><span class="ru">шарф / перчатки</span></li>
+      <li><span class="en">uniform / raincoat</span><span class="ru">форма / дождевик</span></li>
+    </ul>
+    <div class="rule rb" style="margin-top:8px">She <b>is wearing</b> a dress now. &nbsp;|&nbsp; I <b>wear</b> jeans every day.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="a-trans">
+    <div class="ah" onclick="tog('a-trans')"><div><div class="at2">Транспорт и город · Transport & Town</div><div class="as">Module 8 · 20 слов</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Транспорт</div>
+      <ul class="vl">
+        <li><span class="en">car / bus / tram</span><span class="ru">машина / автобус / трамвай</span></li>
+        <li><span class="en">train / plane</span><span class="ru">поезд / самолёт</span></li>
+        <li><span class="en">bicycle / bike</span><span class="ru">велосипед</span></li>
+        <li><span class="en">taxi / underground</span><span class="ru">такси / метро</span></li>
+        <li><span class="en">by bus / by train / on foot</span><span class="ru">на автобусе / на поезде / пешком</span></li>
+        <li><span class="en">station / airport / stop</span><span class="ru">вокзал / аэропорт / остановка</span></li>
+      </ul>
+      <div class="sl">Город</div>
+      <ul class="vl">
+        <li><span class="en">park / cinema / museum</span><span class="ru">парк / кинотеатр / музей</span></li>
+        <li><span class="en">library / supermarket</span><span class="ru">библиотека / супермаркет</span></li>
+        <li><span class="en">café / restaurant</span><span class="ru">кафе / ресторан</span></li>
+        <li><span class="en">hospital / pharmacy</span><span class="ru">больница / аптека</span></li>
+        <li><span class="en">post office / bank</span><span class="ru">почта / банк</span></li>
+        <li><span class="en">street / road / town / village</span><span class="ru">улица / дорога / город / деревня</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-hols">
+    <div class="ah" onclick="tog('a-hols')"><div><div class="at2">Праздники · Celebrations</div><div class="as">11 слов и фраз</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">birthday / party</span><span class="ru">день рождения / вечеринка</span></li>
+      <li><span class="en">present / gift / card</span><span class="ru">подарок / открытка</span></li>
+      <li><span class="en">cake / candle</span><span class="ru">торт / свеча</span></li>
+      <li><span class="en">Christmas (25 December)</span><span class="ru">Рождество</span></li>
+      <li><span class="en">New Year (1 January)</span><span class="ru">Новый год</span></li>
+      <li><span class="en">Easter</span><span class="ru">Пасха</span></li>
+      <li><span class="en">Happy Birthday!</span><span class="ru">С днём рождения!</span></li>
+      <li><span class="en">Merry Christmas!</span><span class="ru">С Рождеством!</span></li>
+      <li><span class="en">Happy New Year!</span><span class="ru">С Новым годом!</span></li>
+      <li><span class="en">Happy Easter!</span><span class="ru">Со Светлым Воскресением!</span></li>
+      <li><span class="en">Best wishes! / With love,</span><span class="ru">С наилучшими пожеланиями!</span></li>
+    </ul></div>
+  </div>
+
+  <div class="acc" id="a-time">
+    <div class="ah" onclick="tog('a-time')"><div><div class="at2">Дни, месяцы, время · Time</div><div class="as">Полный набор</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Дни недели</div>
+      <ul class="vl">
+        <li><span class="en">Monday / Tuesday / Wednesday</span><span class="ru">пон. / вт. / ср.</span></li>
+        <li><span class="en">Thursday / Friday</span><span class="ru">четверг / пятница</span></li>
+        <li><span class="en">Saturday / Sunday</span><span class="ru">суббота / воскресенье</span></li>
+        <li><span class="en">on Monday / at the weekend</span><span class="ru">в понедельник / на выходных</span></li>
+      </ul>
+      <div class="sl">Месяцы</div>
+      <ul class="vl">
+        <li><span class="en">January / February / March</span><span class="ru">январь / февраль / март</span></li>
+        <li><span class="en">April / May / June</span><span class="ru">апрель / май / июнь</span></li>
+        <li><span class="en">July / August / September</span><span class="ru">июль / август / сентябрь</span></li>
+        <li><span class="en">October / November / December</span><span class="ru">октябрь / ноябрь / декабрь</span></li>
+      </ul>
+      <div class="sl">Время и даты</div>
+      <ul class="vl">
+        <li><span class="en">on the 1st of September</span><span class="ru">первого сентября</span></li>
+        <li><span class="en">It's 3 o'clock.</span><span class="ru">Три часа.</span></li>
+        <li><span class="en">It's half past five.</span><span class="ru">Половина шестого.</span></li>
+        <li><span class="en">today / yesterday / tomorrow</span><span class="ru">сегодня / вчера / завтра</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="a-phrases">
+    <div class="ah" onclick="tog('a-phrases')"><div><div class="at2">Фразы для анкеты (Задание 4)</div><div class="as">12 шаблонов</div></div><span class="arr">▾</span></div>
+    <div class="ab"><ul class="vl">
+      <li><span class="en">My name is ... / surname...</span><span class="ru">Меня зовут ... / Фамилия</span></li>
+      <li><span class="en">I am ... years old.</span><span class="ru">Мне ... лет.</span></li>
+      <li><span class="en">I live in Moscow.</span><span class="ru">Я живу в Москве.</span></li>
+      <li><span class="en">I go to school number ...</span><span class="ru">Я учусь в школе №...</span></li>
+      <li><span class="en">My favourite subject is Maths.</span><span class="ru">Любимый предмет — математика.</span></li>
+      <li><span class="en">I have got a pet — a cat.</span><span class="ru">У меня есть питомец — кошка.</span></li>
+      <li><span class="en">In my free time I like reading.</span><span class="ru">В свободное время я люблю читать.</span></li>
+      <li><span class="en">My hobby is drawing / football.</span><span class="ru">Моё хобби — рисование.</span></li>
+      <li><span class="en">I want to be a doctor.</span><span class="ru">Я хочу стать врачом.</span></li>
+      <li><span class="en">I think that ... because ...</span><span class="ru">Я думаю, что ... потому что ...</span></li>
+      <li><span class="en">I would like to ...</span><span class="ru">Я хотел(а) бы ...</span></li>
+      <li><span class="en">Happy Birthday! / Best wishes!</span><span class="ru">С днём рождения!</span></li>
+    </ul></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     ГРАММАТИКА
+══════════════════════════════════════════════════════ -->
+<div id="pg-gram" class="pg">
+  <span class="chip" style="background:var(--purp)">3. Грамматика · 17 тем</span>
+
+  <div class="acc" id="g-tobe">
+    <div class="ah op" onclick="tog('g-tobe')"><div><div class="at2">TO BE — быть / являться</div></div><span class="arr">▾</span></div>
+    <div class="ab op">
+      <table class="gt"><tr><th>Лицо</th><th>+</th><th>−</th><th>?</th></tr>
+      <tr><td><b>I</b></td><td><b>am</b> (I'm)</td><td>am not</td><td>Am I?</td></tr>
+      <tr><td><b>He/She/It</b></td><td><b>is</b></td><td>isn't</td><td>Is he?</td></tr>
+      <tr><td><b>We/You/They</b></td><td><b>are</b></td><td>aren't</td><td>Are they?</td></tr></table>
+      <div class="rule rp" style="margin-top:8px">I am 10. She is my friend. They are not here.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-ps">
+    <div class="ah" onclick="tog('g-ps')"><div><div class="at2">Present Simple</div><div class="as">every day, always, never</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="rule rb">I/You/We/They + глагол &nbsp;|&nbsp; He/She/It + глагол<b>+s/es</b></div>
+      <table class="gt" style="margin-top:8px"><tr><th>Форма</th><th>Пример</th></tr>
+        <tr><td>+</td><td>She reads every day.</td></tr>
+        <tr><td>−</td><td>He doesn't play.</td></tr>
+        <tr><td>?</td><td>Do they like pizza?</td></tr>
+        <tr><td>? spec.</td><td>What does he eat?</td></tr></table>
+      <div class="rule rb" style="margin-top:8px">+s: reads, plays &nbsp;|&nbsp; +es: watches, goes &nbsp;|&nbsp; +ies: studies</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-pc">
+    <div class="ah" onclick="tog('g-pc')"><div><div class="at2">Present Continuous</div><div class="as">now, at the moment, look!</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="rule rb">am/is/are + глагол<b>+ing</b> — действие ПРЯМО СЕЙЧАС</div>
+      <table class="gt" style="margin-top:8px"><tr><th>Форма</th><th>Пример</th></tr>
+        <tr><td>+</td><td>I am playing now.</td></tr>
+        <tr><td>−</td><td>She isn't sleeping.</td></tr>
+        <tr><td>?</td><td>Are they watching TV?</td></tr>
+        <tr><td>? spec.</td><td>What is he doing?</td></tr></table>
+      <div class="rule rb" style="margin-top:8px">swim→swim<b>ming</b> (удвоение) &nbsp;|&nbsp; dance→danc<b>ing</b> (-е убираем)</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-pspc">
+    <div class="ah" onclick="tog('g-pspc')"><div><div class="at2">PS vs PC — сравнение ★</div><div class="as">every day vs now</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th></th><th>Present Simple</th><th>Present Continuous</th></tr>
+        <tr><td>Когда</td><td>Регулярно, всегда</td><td>Прямо сейчас</td></tr>
+        <tr><td>Маркеры</td><td>always, every day, never</td><td>now, look!, at the moment</td></tr>
+        <tr><td>+</td><td>She reads every day.</td><td>She is reading now.</td></tr>
+        <tr><td>−</td><td>He doesn't play.</td><td>He isn't playing.</td></tr></table>
+      <div class="rule rp" style="margin-top:8px">EVERY DAY = Simple &nbsp;&nbsp;|&nbsp;&nbsp; NOW = Continuous<br>I usually <b>walk</b> to school. BUT: I <b>am walking</b> now.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-past">
+    <div class="ah" onclick="tog('g-past')"><div><div class="at2">Past Simple</div><div class="as">yesterday, last week, ago</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="rule rb">Правильные: +<b>ed</b> &nbsp;|&nbsp; Неправильные: учить!</div>
+      <table class="gt" style="margin-top:8px"><tr><th>Форма</th><th>Пример</th></tr>
+        <tr><td>+</td><td>She played yesterday.</td></tr>
+        <tr><td>−</td><td>He didn't go to school.</td></tr>
+        <tr><td>?</td><td>Did they visit London?</td></tr>
+        <tr><td>TO BE</td><td>I was / we were at home.</td></tr></table>
+      <div class="sl">Неправильные глаголы</div>
+      <table class="gt"><tr><th>Инф.</th><th>Past</th><th>Перевод</th></tr>
+        <tr><td>go</td><td><b>went</b></td><td>идти</td></tr>
+        <tr><td>have</td><td><b>had</b></td><td>иметь</td></tr>
+        <tr><td>see</td><td><b>saw</b></td><td>видеть</td></tr>
+        <tr><td>come</td><td><b>came</b></td><td>приходить</td></tr>
+        <tr><td>take</td><td><b>took</b></td><td>брать</td></tr>
+        <tr><td>make</td><td><b>made</b></td><td>делать</td></tr>
+        <tr><td>eat</td><td><b>ate</b></td><td>есть</td></tr>
+        <tr><td>drink</td><td><b>drank</b></td><td>пить</td></tr>
+        <tr><td>write</td><td><b>wrote</b></td><td>писать</td></tr>
+        <tr><td>read</td><td><b>read</b></td><td>читать</td></tr></table>
+    </div>
+  </div>
+
+  <div class="acc" id="g-fut">
+    <div class="ah" onclick="tog('g-fut')"><div><div class="at2">Future Simple + Going to</div><div class="as">Будущее время</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Форма</th><th>Когда</th><th>Пример</th></tr>
+        <tr><td><b>will</b> + глагол</td><td>Решение на месте</td><td>I will help you.</td></tr>
+        <tr><td><b>going to</b></td><td>Запланировано</td><td>She is going to visit London.</td></tr>
+        <tr><td><b>would like to</b></td><td>Хотел бы</td><td>I'd like to learn French.</td></tr></table>
+      <div class="rule rb" style="margin-top:8px">won't = will not &nbsp;|&nbsp; not going to = не собираюсь</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-there">
+    <div class="ah" onclick="tog('g-there')"><div><div class="at2">There is / There are ★</div><div class="as">Есть в наличии (Module 5)</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Форма</th><th>Пример</th></tr>
+        <tr><td><b>There is</b> + ед.ч.</td><td>There is a cat on the sofa.</td></tr>
+        <tr><td><b>There are</b> + мн.ч.</td><td>There are two books on the desk.</td></tr>
+        <tr><td>Отрицание</td><td>There is no bed in the room.</td></tr>
+        <tr><td>Вопрос ед.ч.</td><td>Is there a TV? — Yes, there is.</td></tr>
+        <tr><td>Вопрос мн.ч.</td><td>Are there any chairs? — No, there aren't.</td></tr></table>
+      <div class="rule rp" style="margin-top:8px"><b>There IS</b> one book. vs <b>There ARE</b> three books.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-some">
+    <div class="ah" onclick="tog('g-some')"><div><div class="at2">Some / Any / No ★</div><div class="as">Module 3 — еда и напитки</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Слово</th><th>Когда</th><th>Пример</th></tr>
+        <tr><td><b>some</b></td><td>утверждения</td><td>I have some apples.</td></tr>
+        <tr><td><b>any</b></td><td>вопросы и отрицания</td><td>Have you got any juice?</td></tr>
+        <tr><td><b>no</b></td><td>отрицание</td><td>There is no water.</td></tr>
+        <tr><td><b>some</b> в ?</td><td>предложение/просьба</td><td>Would you like some tea?</td></tr></table>
+      <div class="rule rp" style="margin-top:8px"><b>Исчисляемые:</b> some apples, any books &nbsp;|&nbsp; <b>Неисчисляемые:</b> some milk, any water</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-count">
+    <div class="ah" onclick="tog('g-count')"><div><div class="at2">Countable / Uncountable ★</div><div class="as">Исчисляемые / неисчисляемые</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Тип</th><th>Примеры</th><th>Вопрос</th></tr>
+        <tr><td><b>Countable</b></td><td>apple, egg, dog, book</td><td>How <b>many</b>?</td></tr>
+        <tr><td><b>Uncountable</b></td><td>milk, water, bread, rice</td><td>How <b>much</b>?</td></tr>
+        <tr><td>Меры</td><td>a glass of milk</td><td>a piece of bread</td></tr></table>
+      <div class="rule rp" style="margin-top:8px">How <b>many</b> apples? — Three. &nbsp;|&nbsp; How <b>much</b> milk? — A glass.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-modal">
+    <div class="ah" onclick="tog('g-modal')"><div><div class="at2">Модальные глаголы · Modals</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Глагол</th><th>Значение</th><th>Пример</th></tr>
+        <tr><td><b>can</b></td><td>умею</td><td>I can swim.</td></tr>
+        <tr><td><b>can't</b></td><td>не умею</td><td>She can't fly.</td></tr>
+        <tr><td><b>must</b></td><td>обязан (сам решил)</td><td>I must study.</td></tr>
+        <tr><td><b>mustn't</b></td><td>НЕЛЬЗЯ — запрет!</td><td>You mustn't run!</td></tr>
+        <tr><td><b>have to</b></td><td>обязан (обстоятельства)</td><td>He has to wear uniform.</td></tr>
+        <tr><td><b>don't have to</b></td><td>не обязан (можно не делать)</td><td>You don't have to come.</td></tr></table>
+      <div class="rule rr" style="margin-top:8px"><b>mustn't</b> = НЕЛЬЗЯ (запрет!)<br><b>don't have to</b> = не обязан (не запрещено, просто не нужно)<br>Это РАЗНЫЕ значения — не путай!</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-art">
+    <div class="ah" onclick="tog('g-art')"><div><div class="at2">Артикли · A / AN / THE</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="rule rb"><b>A</b> — перед согласным звуком: a cat, a dog<br><b>AN</b> — перед гласным звуком: an apple, an hour<br><b>THE</b> — конкретный/единственный: the Sun, the book<br><b>—</b> нет артикля: имена, страны, языки: Russia, English</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-plur">
+    <div class="ah" onclick="tog('g-plur')"><div><div class="at2">Множественное число · Plurals</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Правило</th><th>Пример</th></tr>
+        <tr><td>+s</td><td>cat→cats, book→books</td></tr>
+        <tr><td>+es (s,x,ch,sh,o)</td><td>box→boxes, watch→watches</td></tr>
+        <tr><td>-y → -ies</td><td>baby→babies, city→cities</td></tr>
+        <tr><td>-f → -ves</td><td>leaf→leaves, wolf→wolves</td></tr>
+        <tr><td><b>Исключения!</b></td><td>child→<b>children</b>, man→<b>men</b>,<br>woman→<b>women</b>, mouse→<b>mice</b>,<br>foot→<b>feet</b>, tooth→<b>teeth</b>, fish→<b>fish</b></td></tr></table>
+    </div>
+  </div>
+
+  <div class="acc" id="g-comp">
+    <div class="ah" onclick="tog('g-comp')"><div><div class="at2">Степени сравнения · Comparison</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="rule rb">Короткие: +er/est &nbsp;|&nbsp; Длинные: more/most</div>
+      <table class="gt" style="margin-top:8px"><tr><th>Прил.</th><th>Сравн.</th><th>Превосх.</th></tr>
+        <tr><td>tall</td><td>taller</td><td>the tallest</td></tr>
+        <tr><td>big</td><td>bigger*</td><td>the biggest*</td></tr>
+        <tr><td>nice</td><td>nicer</td><td>the nicest</td></tr>
+        <tr><td>happy</td><td>happier</td><td>the happiest</td></tr>
+        <tr><td>beautiful</td><td>more beautiful</td><td>the most beautiful</td></tr>
+        <tr><td><b>good</b> !</td><td><b>better</b></td><td><b>the best</b></td></tr>
+        <tr><td><b>bad</b> !</td><td><b>worse</b></td><td><b>the worst</b></td></tr></table>
+      <div class="rule rb" style="margin-top:8px">Mary is <b>taller than</b> Ann. &nbsp;|&nbsp; Tom is <b>the tallest</b> in the class.</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-poss">
+    <div class="ah" onclick="tog('g-poss')"><div><div class="at2">Притяжательный падеж 's ★</div><div class="as">Tom's bag, Whose...?</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Правило</th><th>Пример</th><th>Перевод</th></tr>
+        <tr><td>ед.ч. + 's</td><td>Tom's bag</td><td>сумка Тома</td></tr>
+        <tr><td>ед.ч. + 's</td><td>Ann's sister</td><td>сестра Ани</td></tr>
+        <tr><td>мн.ч. -s + '</td><td>the boys' room</td><td>комната мальчиков</td></tr>
+        <tr><td>Вопрос</td><td>Whose bag is this?</td><td>Чья это сумка?</td></tr></table>
+      <div class="rule rr" style="margin-top:8px">Не путай: <b>Tom's book</b> (притяжат.) и <b>Tom's at home</b> (= Tom IS)</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-imp">
+    <div class="ah" onclick="tog('g-imp')"><div><div class="at2">Imperative — Повелительное ★</div><div class="as">Open! Don't run! Let's!</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Форма</th><th>Пример</th></tr>
+        <tr><td>Глагол</td><td>Open your book! Sit down!</td></tr>
+        <tr><td>Don't + глагол</td><td>Don't run! Don't be late!</td></tr>
+        <tr><td>Let's + глагол</td><td>Let's play football!</td></tr></table>
+      <div class="rule rp" style="margin-top:8px">School rules: <b>Be quiet! / Listen! / Write! / Don't talk!</b></div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-pron">
+    <div class="ah" onclick="tog('g-pron')"><div><div class="at2">Местоимения · Pronouns</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Личное</th><th>Притяжат.</th><th>Объектное</th></tr>
+        <tr><td>I</td><td><b>my</b></td><td>me</td></tr>
+        <tr><td>you</td><td><b>your</b></td><td>you</td></tr>
+        <tr><td>he / she / it</td><td><b>his / her / its</b></td><td>him / her</td></tr>
+        <tr><td>we</td><td><b>our</b></td><td>us</td></tr>
+        <tr><td>they</td><td><b>their</b></td><td>them</td></tr></table>
+      <div class="rule rb" style="margin-top:8px"><b>This/These</b> — этот/эти (близко) &nbsp;|&nbsp; <b>That/Those</b> — тот/те (далеко)</div>
+    </div>
+  </div>
+
+  <div class="acc" id="g-prep">
+    <div class="ah" onclick="tog('g-prep')"><div><div class="at2">Предлоги места и времени</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <div class="sl">Место</div>
+      <ul class="vl">
+        <li><span class="en">in</span><span class="ru">в (внутри): in the box</span></li>
+        <li><span class="en">on</span><span class="ru">на: on the table</span></li>
+        <li><span class="en">under</span><span class="ru">под: under the chair</span></li>
+        <li><span class="en">next to / near</span><span class="ru">рядом с</span></li>
+        <li><span class="en">between</span><span class="ru">между</span></li>
+        <li><span class="en">in front of / behind</span><span class="ru">перед / позади</span></li>
+        <li><span class="en">above / below / opposite</span><span class="ru">над / под / напротив</span></li>
+      </ul>
+      <div class="sl">Время</div>
+      <ul class="vl">
+        <li><span class="en">at 5 o'clock</span><span class="ru">в 5 часов</span></li>
+        <li><span class="en">in May / in 2024</span><span class="ru">в мае / в 2024 году</span></li>
+        <li><span class="en">on Monday</span><span class="ru">в понедельник</span></li>
+        <li><span class="en">in the morning / evening</span><span class="ru">утром / вечером</span></li>
+        <li><span class="en">at night / before / after</span><span class="ru">ночью / до / после</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acc" id="g-adv">
+    <div class="ah" onclick="tog('g-adv')"><div><div class="at2">Наречия частотности · Frequency</div></div><span class="arr">▾</span></div>
+    <div class="ab">
+      <table class="gt"><tr><th>Наречие</th><th>%</th><th>Пример</th></tr>
+        <tr><td><b>always</b></td><td>100%</td><td>I always brush my teeth.</td></tr>
+        <tr><td><b>usually</b></td><td>80%</td><td>She usually has breakfast at 7.</td></tr>
+        <tr><td><b>often</b></td><td>60%</td><td>We often play football.</td></tr>
+        <tr><td><b>sometimes</b></td><td>40%</td><td>He sometimes watches TV.</td></tr>
+        <tr><td><b>rarely</b></td><td>20%</td><td>They rarely eat fast food.</td></tr>
+        <tr><td><b>never</b></td><td>0%</td><td>I never eat meat.</td></tr></table>
+      <div class="rule rp" style="margin-top:8px">ПЕРЕД основным глаголом, но ПОСЛЕ to be:<br>She <b>always</b> reads. / He is <b>always</b> late.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct" style="color:var(--teal)">True / False / Not Stated</div>
+    <div class="rule rg">✅ <b>TRUE</b> — в тексте ЕСТЬ это утверждение прямо или косвенно</div>
+    <div class="rule rr" style="margin-top:6px">❌ <b>FALSE</b> — в тексте написано ПРОТИВОПОЛОЖНОЕ</div>
+    <div class="rule ra" style="margin-top:6px">❓ <b>NOT STATED</b> — в тексте об этом вообще НЕ говорится</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     ЧИСЛА
+══════════════════════════════════════════════════════ -->
+<div id="pg-nums" class="pg">
+  <span class="chip" style="background:var(--teal)">2. Числа · Numbers</span>
+  <div class="card">
+    <div class="ct" style="color:var(--teal)">1 – 20</div>
+    <div class="ng">
+      <div class="nc"><div class="n">1</div><div class="w">one</div></div><div class="nc"><div class="n">2</div><div class="w">two</div></div><div class="nc"><div class="n">3</div><div class="w">three</div></div><div class="nc"><div class="n">4</div><div class="w">four</div></div><div class="nc"><div class="n">5</div><div class="w">five</div></div>
+      <div class="nc"><div class="n">6</div><div class="w">six</div></div><div class="nc"><div class="n">7</div><div class="w">seven</div></div><div class="nc"><div class="n">8</div><div class="w">eight</div></div><div class="nc"><div class="n">9</div><div class="w">nine</div></div><div class="nc"><div class="n">10</div><div class="w">ten</div></div>
+      <div class="nc"><div class="n">11</div><div class="w">eleven</div></div><div class="nc"><div class="n">12</div><div class="w">twelve</div></div><div class="nc"><div class="n">13</div><div class="w">thirteen</div></div><div class="nc"><div class="n">14</div><div class="w">fourteen</div></div><div class="nc"><div class="n">15</div><div class="w">fifteen</div></div>
+      <div class="nc"><div class="n">16</div><div class="w">sixteen</div></div><div class="nc"><div class="n">17</div><div class="w">seventeen</div></div><div class="nc"><div class="n">18</div><div class="w">eighteen</div></div><div class="nc"><div class="n">19</div><div class="w">nineteen</div></div><div class="nc"><div class="n">20</div><div class="w">twenty</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct" style="color:var(--teal)">Десятки 30–100</div>
+    <div class="ng" style="grid-template-columns:repeat(4,1fr)">
+      <div class="nc"><div class="n">30</div><div class="w">thirty</div></div><div class="nc"><div class="n">40</div><div class="w">forty</div></div><div class="nc"><div class="n">50</div><div class="w">fifty</div></div><div class="nc"><div class="n">60</div><div class="w">sixty</div></div>
+      <div class="nc"><div class="n">70</div><div class="w">seventy</div></div><div class="nc"><div class="n">80</div><div class="w">eighty</div></div><div class="nc"><div class="n">90</div><div class="w">ninety</div></div><div class="nc"><div class="n">100</div><div class="w">a hundred</div></div>
+    </div>
+    <div class="rule rt" style="margin-top:8px">Составные через дефис: <b>twenty-one</b>, <b>thirty-five</b></div>
+  </div>
+  <div class="card">
+    <div class="ct" style="color:var(--teal)">Порядковые · Ordinals</div>
+    <div class="ng">
+      <div class="nc"><div class="n">1st</div><div class="w">first</div></div><div class="nc"><div class="n">2nd</div><div class="w">second</div></div><div class="nc"><div class="n">3rd</div><div class="w">third</div></div><div class="nc"><div class="n">4th</div><div class="w">fourth</div></div><div class="nc"><div class="n">5th</div><div class="w">fifth</div></div>
+      <div class="nc"><div class="n">6th</div><div class="w">sixth</div></div><div class="nc"><div class="n">7th</div><div class="w">seventh</div></div><div class="nc"><div class="n">8th</div><div class="w">eighth</div></div><div class="nc"><div class="n">9th</div><div class="w">ninth</div></div><div class="nc"><div class="n">10th</div><div class="w">tenth</div></div>
+      <div class="nc"><div class="n">11th</div><div class="w">eleventh</div></div><div class="nc"><div class="n">12th</div><div class="w">twelfth</div></div><div class="nc"><div class="n">20th</div><div class="w">twentieth</div></div><div class="nc"><div class="n">21st</div><div class="w">twenty-first</div></div><div class="nc"><div class="n">30th</div><div class="w">thirtieth</div></div>
+    </div>
+    <div class="rule rt" style="margin-top:8px">Даты: <b>on the 1st of September</b> — первого сентября</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     АНКЕТА (ЗАДАНИЕ 4)
+══════════════════════════════════════════════════════ -->
+<div id="pg-task4" class="pg">
+  <span class="chip" style="background:var(--amb)">Задание 4 · Анкета · 10 баллов</span>
+  <div class="rule ra" style="margin-bottom:10px">Задание 4 — самое весомое (10 из 25 баллов). Заполняем анкету/формуляр на английском.</div>
+
+  <div class="card">
+    <div class="ct" style="color:var(--amb)">Образец заполнения</div>
+    <table class="gt">
+      <tr><th>Поле</th><th>Что писать</th><th>Пример</th></tr>
+      <tr><td>First name</td><td>Имя</td><td>Ivan / Anna</td></tr>
+      <tr><td>Surname</td><td>Фамилия</td><td>Ivanov / Petrova</td></tr>
+      <tr><td>Age</td><td>Возраст</td><td>10 &nbsp;или&nbsp; 10 years old</td></tr>
+      <tr><td>Country</td><td>Страна</td><td>Russia</td></tr>
+      <tr><td>City / Town</td><td>Город</td><td>Moscow / Mytishchi</td></tr>
+      <tr><td>School</td><td>Школа</td><td>School No. 5</td></tr>
+      <tr><td>Favourite subject</td><td>Предмет</td><td>English / Maths / Art</td></tr>
+      <tr><td>Hobby / Free time</td><td>Хобби</td><td>I like reading. / Swimming.</td></tr>
+      <tr><td>Pet</td><td>Питомец</td><td>I have a cat named Murzik.</td></tr>
+      <tr><td>Favourite food</td><td>Еда</td><td>Pizza / Fruit / Soup</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct" style="color:var(--red)">Правила написания — не забудь!</div>
+    <div class="rule rr">1. Каждое поле начинай с <b>заглавной буквы</b>: Moscow, Anna.</div>
+    <div class="rule rr" style="margin-top:6px">2. Страна: <b>Russia</b> — без артикля «the».</div>
+    <div class="rule rr" style="margin-top:6px">3. Возраст: просто <b>10</b>, или фраза <b>I am 10 years old</b>.</div>
+    <div class="rule rr" style="margin-top:6px">4. Точка в конце предложения. Апостроф: I'm, don't, it's.</div>
+    <div class="rule rr" style="margin-top:6px">5. Проверь пунктуацию перед сдачей!</div>
+  </div>
+
+  <div class="card">
+    <div class="ct" style="color:var(--grn)">Стратегия чтения (Задание 2)</div>
+    <div class="rule rg">Шаг 1: Прочитай <b>ЗАДАНИЕ</b> раньше текста — пойми, что искать.</div>
+    <div class="rule rg" style="margin-top:6px">Шаг 2: Быстро просмотри текст — тема, герои, место.</div>
+    <div class="rule rg" style="margin-top:6px">Шаг 3: Ищи ключевые слова вопроса в тексте.</div>
+    <div class="rule rg" style="margin-top:6px">Шаг 4: Отвечай <b>только на основе текста</b> — не придумывай!</div>
+    <div class="rule rg" style="margin-top:6px">✅ <b>TRUE</b> — есть в тексте &nbsp;|&nbsp; ❌ <b>FALSE</b> — противоположное &nbsp;|&nbsp; ❓ <b>NOT STATED</b> — не упоминается</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     ТЕСТ
+══════════════════════════════════════════════════════ -->
+<div id="pg-test" class="pg">
+  <span class="chip" style="background:var(--amb)">Интерактивный тест · ВПР</span>
+
+  <!-- Category selector -->
+  <div id="quiz-cats" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+    <button class="qcat active" onclick="startQuiz('all')">Все (110)</button>
+    <button class="qcat" onclick="startQuiz('vocab')">Лексика (60)</button>
+    <button class="qcat" onclick="startQuiz('gram')">Грамматика (30)</button>
+    <button class="qcat" onclick="startQuiz('comp')">Степени сравнения (20)</button>
+  </div>
+
+  <!-- Quiz arena -->
+  <div id="quiz-arena">
+    <!-- Progress -->
+    <div id="qz-head" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px;color:var(--mg)">
+      <span id="qz-counter">Вопрос 1 из 10</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span id="qz-score" style="font-weight:600;color:var(--blue)">✓ 0</span>
+        <button onclick="resetQuiz()" title="В начало" style="background:none;border:1.5px solid #ddd;border-radius:20px;padding:3px 10px;font-size:12px;color:var(--mg);cursor:pointer;font-family:inherit;line-height:1.5">↩ Начало</button>
+      </div>
+    </div>
+    <div style="background:#eee;border-radius:6px;height:5px;margin-bottom:14px;overflow:hidden">
+      <div id="qz-bar" style="background:var(--blue);height:100%;width:0%;transition:width .3s"></div>
+    </div>
+
+    <!-- Question card -->
+    <div id="qz-card" class="card" style="margin-bottom:8px">
+      <div id="qz-tag" style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mg);margin-bottom:8px"></div>
+      <div id="qz-q" style="font-size:16px;font-weight:600;line-height:1.4;margin-bottom:14px"></div>
+      <div id="qz-opts"></div>
+    </div>
+
+    <!-- Feedback -->
+    <div id="qz-fb" style="display:none;padding:10px 14px;border-radius:10px;font-size:13px;line-height:1.6;margin-bottom:10px"></div>
+
+    <!-- Next button -->
+    <button id="qz-next" onclick="nextQ()" style="display:none;width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit">Следующий вопрос →</button>
+  </div>
+
+  <!-- Result screen -->
+  <div id="quiz-result" style="display:none">
+    <div class="card" style="text-align:center;padding:24px 16px">
+      <div id="qr-emoji" style="font-size:48px;margin-bottom:10px"></div>
+      <div id="qr-score" style="font-size:26px;font-weight:700;color:var(--blue);margin-bottom:6px"></div>
+      <div id="qr-msg" style="font-size:14px;color:var(--mg);margin-bottom:20px"></div>
+      <div id="qr-breakdown" style="text-align:left;background:var(--gray);border-radius:10px;padding:12px;margin-bottom:16px;font-size:13px"></div>
+      <button onclick="retryQuiz()" style="width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:8px">Пройти ещё раз</button>
+      <button onclick="document.getElementById('quiz-cats').style.display='flex';document.getElementById('quiz-result').style.display='none';document.getElementById('quiz-arena').style.display='block'" style="width:100%;padding:11px;background:transparent;color:var(--blue);border:1.5px solid var(--blue);border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit">Выбрать другой раздел</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     ПЛАН ПОДГОТОВКИ
+══════════════════════════════════════════════════════ -->
+<div id="pg-plan" class="pg">
+  <span class="chip" style="background:var(--grn)">8. План · 5 дней подготовки</span>
+
+  <div class="dc">
+    <div class="dh" style="background:#27500A"><span>День 1</span><span>Лексика: семья, школа, предметы, питомцы</span></div>
+    <div style="background:var(--lgrn)">
+      <div class="dr"><div class="di">20–30 мин</div><div class="dtx">Открой «Слова» — первые 4 темы. Читай EN → закрой RU → скажи по-русски.</div></div>
+      <div class="dr"><div class="di">Итог</div><div class="dtx">~40 слов по четырём темам.</div></div>
+    </div>
+  </div>
+
+  <div class="dc">
+    <div class="dh" style="background:var(--grn)"><span>День 2</span><span>Лексика: еда, хобби, профессии, внешность, погода, дом, одежда</span></div>
+    <div style="background:#F0F8E8">
+      <div class="dr"><div class="di">Слова</div><div class="dtx">Оставшиеся темы — карточками или вслух.</div></div>
+      <div class="dr"><div class="di">Числа</div><div class="dtx">Попроси взрослого называть числа вразброс — ты переводи.</div></div>
+      <div class="dr"><div class="di">Итог</div><div class="dtx">Вся лексика пройдена. Числа 1–100 знаешь.</div></div>
+    </div>
+  </div>
+
+  <div class="dc">
+    <div class="dh" style="background:var(--teal)"><span>День 3</span><span>Грамматика — все времена + ключевые правила</span></div>
+    <div style="background:#EBF7F3">
+      <div class="dr"><div class="di">Урок 1</div><div class="dtx">TO BE + Present Simple. Придумай 5 предложений для he/she/it.</div></div>
+      <div class="dr"><div class="di">Урок 2</div><div class="dtx">Present Continuous: am/is/are + -ing. Маркер: now.</div></div>
+      <div class="dr"><div class="di">Урок 3</div><div class="dtx">Past Simple: +ed и неправильные. Маркер: yesterday.</div></div>
+      <div class="dr"><div class="di">Урок 4</div><div class="dtx">There is/are. Some/any. mustn't vs don't have to.</div></div>
+    </div>
+  </div>
+
+  <div class="dc">
+    <div class="dh" style="background:var(--blue)"><span>День 4</span><span>Чтение + Анкета (Задание 4)</span></div>
+    <div style="background:var(--lblue)">
+      <div class="dr"><div class="di">Текст</div><div class="dtx">Прочитай текст вслух. Ответь на вопросы. True/False/Not Stated.</div></div>
+      <div class="dr"><div class="di">Анкета</div><div class="dtx">Заполни анкету из раздела «Анкета». Проверь заглавные буквы!</div></div>
+      <div class="dr"><div class="di">Итог</div><div class="dtx">Умеешь работать с текстом и заполнять анкету.</div></div>
+    </div>
+  </div>
+
+  <div class="dc">
+    <div class="dh" style="background:var(--pink)"><span>День 5</span><span>Только повторение — ничего нового!</span></div>
+    <div style="background:var(--lpink)">
+      <div class="dr"><div class="di">Тест</div><div class="dtx">Пройди тест из раздела «Тест» — засеки 15 минут.</div></div>
+      <div class="dr"><div class="di">Анкета</div><div class="dtx">Ещё раз заполни анкету — пунктуация и заглавные буквы.</div></div>
+      <div class="dr"><div class="di">Вечер</div><div class="dtx">20 мин — и отдыхай. Мозг закрепляет материал во сне!</div></div>
+      <div class="dr"><div class="di">Сон</div><div class="dtx">Полноценный сон важнее ночного зубрения.</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:4px">
+    <div class="ct" style="color:var(--grn)">Как запоминать быстрее</div>
+    <div class="rule rg"><b>Карточки</b> — Anki (бесплатно) или бумажки. 10 слов в день — реально.</div>
+    <div class="rule rg" style="margin-top:6px"><b>Ассоциации</b> — elephant = «элефант топает». Чем смешнее — тем лучше.</div>
+    <div class="rule rg" style="margin-top:6px"><b>Вслух</b> — произноси, не только читай глазами. Слуховая память!</div>
+    <div class="rule rg" style="margin-top:6px"><b>Примеры</b> — придумай 5 своих предложений с новым правилом.</div>
+  </div>
+
+  <div class="card">
+    <div class="ct" style="color:var(--blue)">В день ВПР</div>
+    <div class="rule rb"><b>Утром:</b> не учи. Завтрак + вслух: My name is… I am… years old. I live in…</div>
+    <div class="rule rb" style="margin-top:6px"><b>На экзамене:</b> сначала ЗАДАНИЕ, потом текст. Задание 4 — заглавные буквы!</div>
+    <div class="rule rb" style="margin-top:6px"><b>Не знаешь?</b> Пропусти, вернись потом. Не оставляй пустых строк.</div>
+    <div class="rule rb" style="margin-top:6px"><b>Главное:</b> доверяй себе. Ты уже подготовился!</div>
+  </div>
+
+  <div class="fin">Удачи на ВПР! &nbsp; Good luck!</div>
+</div>
+
+<style>
+.qcat{padding:7px 14px;border-radius:20px;border:1.5px solid #ccc;background:#fff;font-size:12.5px;font-weight:500;cursor:pointer;font-family:inherit;color:var(--mg);transition:all .15s}
+.qcat.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.qopt{width:100%;text-align:left;padding:11px 14px;background:#fff;border:1.5px solid #e0dfd8;border-radius:10px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--dk);margin-bottom:7px;transition:all .15s;display:flex;align-items:center;gap:10px;line-height:1.4}
+.qopt:active{transform:scale(.98)}
+.qopt.correct{background:var(--lgrn);border-color:var(--grn);color:var(--gt);font-weight:600}
+.qopt.wrong{background:var(--lred);border-color:var(--red);color:var(--red)}
+.qopt.reveal{background:var(--lgrn);border-color:var(--grn);color:var(--gt)}
+.qopt-ck{width:20px;height:20px;border-radius:50%;border:1.5px solid #ccc;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+</style>
+
+<script>
+/* ── Navigation ── */
+function go(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.bn button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pg-'+id).classList.add('active');
+  document.getElementById('tb-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tog(id){
+  const el=document.getElementById(id);
+  el.querySelector('.ah').classList.toggle('op');
+  el.querySelector('.ab').classList.toggle('op');
+}
+
+/* ══════════════════════════════════════════════════
+   QUIZ ENGINE
+══════════════════════════════════════════════════ */
+const BANKS = {
+
+/* ─── VOCABULARY (60 вопросов) ─── */
+vocab: [
+  /* Семья */
+  {t:'Семья',q:'Как переводится "grandmother / granny"?',o:['бабушка','тётя','сестра','дочь'],a:0,e:'granny — ласковое от grandmother'},
+  {t:'Семья',q:'Что означает "cousin"?',o:['двоюродный брат/сестра','племянник','сосед','дядя'],a:0,e:'cousin — двоюродный брат или сестра'},
+  {t:'Семья',q:'Как по-английски "муж"?',o:['uncle','husband','son','brother'],a:1,e:'husband — муж, wife — жена'},
+  {t:'Семья',q:'"Parents" — это...?',o:['родители','дети','бабушки и дедушки','братья и сёстры'],a:0,e:'parents = мама + папа'},
+  /* Школа */
+  {t:'Школа',q:'Что такое "timetable"?',o:['расписание','учебник','домашнее задание','оценка'],a:0,e:'timetable — расписание уроков'},
+  {t:'Школа',q:'"Blackboard" — это...?',o:['доска','тетрадь','парта','окно'],a:0,e:'blackboard = чёрная (классная) доска'},
+  {t:'Школа',q:'Как переводится "homework"?',o:['домашнее задание','классная работа','контрольная','расписание'],a:0,e:'homework — домашнее задание'},
+  {t:'Школа',q:'Что значит "pupil"?',o:['ученик','учитель','директор','родитель'],a:0,e:'pupil — ученик (в школе)'},
+  /* Предметы */
+  {t:'Предметы',q:'Какой предмет — "PE"?',o:['физкультура','рисование','музыка','технология'],a:0,e:'PE = Physical Education = физкультура'},
+  {t:'Предметы',q:'"Maths" — это...?',o:['математика','наука','история','литература'],a:0,e:'Maths (Mathematics) — математика'},
+  {t:'Предметы',q:'Как по-английски "география"?',o:['Geography','History','Science','Literature'],a:0,e:'Geography — география'},
+  {t:'Предметы',q:'"Art" в школе — это...?',o:['рисование / ИЗО','спорт','музыка','информатика'],a:0,e:'Art — изобразительное искусство, рисование'},
+  /* Животные */
+  {t:'Питомцы',q:'Что такое "guinea pig"?',o:['морская свинка','хомяк','кролик','черепаха'],a:0,e:'guinea pig — морская свинка'},
+  {t:'Питомцы',q:'"Turtle" — это...?',o:['черепаха','попугай','золотая рыбка','хомяк'],a:0,e:'turtle — черепаха'},
+  {t:'Животные',q:'Как переводится "fox"?',o:['лиса','волк','медведь','олень'],a:0,e:'fox — лиса (хитрая!)'},
+  {t:'Животные',q:'"Bear" — это...?',o:['медведь','лев','тигр','слон'],a:0,e:'bear — медведь'},
+  /* Еда */
+  {t:'Еда',q:'Что такое "vegetables"?',o:['овощи','фрукты','ягоды','злаки'],a:0,e:'vegetables — овощи'},
+  {t:'Еда',q:'"Butter" — это...?',o:['масло','хлеб','сыр','молоко'],a:0,e:'butter — сливочное масло'},
+  {t:'Еда',q:'Как переводится "dinner"?',o:['ужин','завтрак','обед','перекус'],a:0,e:'dinner — ужин (или обед, главный приём пищи)'},
+  {t:'Еда',q:'"Ice cream" — это...?',o:['мороженое','торт','пирожное','конфета'],a:0,e:'ice cream — мороженое'},
+  /* Напитки */
+  {t:'Напитки',q:'Что такое "lemonade"?',o:['лимонад','сок','молоко','чай'],a:0,e:'lemonade — лимонад'},
+  {t:'Напитки',q:'"Hot chocolate" — это...?',o:['горячий шоколад','кофе','какао','чай'],a:0,e:'hot chocolate — горячий шоколад'},
+  /* Хобби / Спорт */
+  {t:'Хобби',q:'"Ride a bike" означает...?',o:['кататься на велосипеде','кататься на лыжах','плавать','бегать'],a:0,e:'ride a bike — кататься на велосипеде'},
+  {t:'Спорт',q:'Что значит "do gymnastics"?',o:['заниматься гимнастикой','плавать','играть в теннис','бегать'],a:0,e:'do gymnastics — заниматься гимнастикой'},
+  {t:'Хобби',q:'"Take photos" означает...?',o:['фотографировать','рисовать','петь','танцевать'],a:0,e:'take photos — фотографировать'},
+  {t:'Спорт',q:'Как переводится "ski"?',o:['кататься на лыжах','кататься на коньках','плавать','прыгать'],a:0,e:'ski — лыжи / кататься на лыжах'},
+  /* Профессии */
+  {t:'Профессии',q:'"Firefighter" — это...?',o:['пожарный','полицейский','врач','учитель'],a:0,e:'firefighter — пожарный'},
+  {t:'Профессии',q:'Как переводится "scientist"?',o:['учёный','художник','писатель','инженер'],a:0,e:'scientist — учёный (суффикс -ist)'},
+  {t:'Профессии',q:'"Farmer" — это...?',o:['фермер','программист','музыкант','актёр'],a:0,e:'farmer — фермер (farm = ферма + -er)'},
+  {t:'Профессии',q:'Суффикс для профессии "учитель": teach___',o:['-er','-ist','-or','-man'],a:0,e:'teacher = teach + -er (суффикс -er/-or для профессий)'},
+  /* Внешность */
+  {t:'Внешность',q:'"Curly hair" означает...?',o:['кудрявые волосы','прямые волосы','длинные волосы','светлые волосы'],a:0,e:'curly — кудрявый, кудрявые волосы'},
+  {t:'Внешность',q:'Как переводится "slim / thin"?',o:['худой / стройный','высокий','толстый','низкий'],a:0,e:'slim/thin — худой, стройный'},
+  {t:'Характер',q:'"Shy" означает...?',o:['застенчивый','смелый','добрый','ленивый'],a:0,e:'shy — застенчивый, робкий'},
+  {t:'Характер',q:'Что значит "hard-working"?',o:['трудолюбивый','ленивый','умный','вежливый'],a:0,e:'hard-working — трудолюбивый (≠ lazy)'},
+  /* Погода */
+  {t:'Погода',q:'"It is foggy" означает...?',o:['туманно','ветрено','облачно','снежно'],a:0,e:'foggy — туманный, fog — туман'},
+  {t:'Погода',q:'Как переводится "thunder"?',o:['гром','молния','ветер','буря'],a:0,e:'thunder — гром, lightning — молния'},
+  {t:'Погода',q:'"Forecast" — это...?',o:['прогноз','температура','сезон','погода'],a:0,e:'weather forecast — прогноз погоды'},
+  /* Страны */
+  {t:'Страны',q:'Столица Австралии — это...?',o:['Canberra','Sydney','Melbourne','Brisbane'],a:0,e:'Столица Австралии — Канберра, не Сидней!'},
+  {t:'Страны',q:'"Big Ben" находится в...?',o:['Лондоне','Вашингтоне','Москве','Канберре'],a:0,e:'Big Ben — знаменитые часы в Лондоне'},
+  {t:'Страны',q:'Флаг России: белый, ___, красный',o:['синий','жёлтый','зелёный','оранжевый'],a:0,e:'Флаг России: белый, синий, красный'},
+  /* Дом */
+  {t:'Дом',q:'"Wardrobe" — это...?',o:['шкаф для одежды','книжный шкаф','холодильник','комод'],a:0,e:'wardrobe — шкаф (для одежды)'},
+  {t:'Дом',q:'Как переводится "living room"?',o:['гостиная','спальня','кухня','ванная'],a:0,e:'living room — гостиная'},
+  {t:'Мебель',q:'"Curtains" — это...?',o:['шторы','ковёр','лампа','полка'],a:0,e:'curtains — шторы (на окне)'},
+  /* Части тела */
+  {t:'Тело',q:'"Knee" означает...?',o:['колено','локоть','плечо','лодыжка'],a:0,e:'knee — колено'},
+  {t:'Тело',q:'Как переводится "stomach"?',o:['живот','спина','грудь','шея'],a:0,e:'stomach — живот, желудок'},
+  {t:'Тело',q:'"Shoulder" — это...?',o:['плечо','колено','локоть','запястье'],a:0,e:'shoulder — плечо'},
+  /* Одежда */
+  {t:'Одежда',q:'"Raincoat" — это...?',o:['дождевик','пальто','куртка','свитер'],a:0,e:'raincoat — плащ-дождевик (rain = дождь)'},
+  {t:'Одежда',q:'Как переводится "trainers"?',o:['кроссовки','ботинки','туфли','сандалии'],a:0,e:'trainers — спортивные кроссовки'},
+  {t:'Одежда',q:'"Uniform" — это...?',o:['школьная форма','пижама','купальник','шорты'],a:0,e:'uniform — форма (школьная или рабочая)'},
+  /* Транспорт */
+  {t:'Транспорт',q:'"On foot" означает...?',o:['пешком','на автобусе','на машине','на поезде'],a:0,e:'on foot — пешком (ногами)'},
+  {t:'Транспорт',q:'Как переводится "underground"?',o:['метро','автобус','трамвай','такси'],a:0,e:'underground — метро (подземка)'},
+  {t:'Транспорт',q:'"By bus" означает...?',o:['на автобусе','на велосипеде','пешком','на поезде'],a:0,e:'by + транспорт = на транспорте'},
+  /* Город */
+  {t:'Город',q:'"Pharmacy" — это...?',o:['аптека','больница','почта','банк'],a:0,e:'pharmacy — аптека'},
+  {t:'Город',q:'Как переводится "library"?',o:['библиотека','музей','парк','театр'],a:0,e:'library — библиотека'},
+  /* Праздники */
+  {t:'Праздники',q:'"Merry Christmas!" означает...?',o:['С Рождеством!','С Новым годом!','С днём рождения!','Счастливой Пасхи!'],a:0,e:'Merry Christmas! — поздравление с Рождеством'},
+  {t:'Праздники',q:'Christmas отмечают...?',o:['25 декабря','31 декабря','1 января','24 декабря'],a:0,e:'Christmas — 25 декабря (Рождество в Англии)'},
+  {t:'Праздники',q:'"Candle" — это...?',o:['свеча','торт','подарок','открытка'],a:0,e:'candle — свеча'},
+  /* Время */
+  {t:'Дни недели',q:'Среда по-английски — это...?',o:['Wednesday','Tuesday','Thursday','Monday'],a:0,e:'Wednesday — среда (трудное слово, учи отдельно!)'},
+  {t:'Месяцы',q:'"October" — это...?',o:['октябрь','сентябрь','ноябрь','декабрь'],a:0,e:'October — октябрь'},
+  {t:'Время',q:'"It\'s half past five" означает...?',o:['половина шестого','пять тридцать утра','без пяти шесть','шесть часов'],a:0,e:'half past five = 5:30 — половина шестого'},
+],
+
+/* ─── GRAMMAR (30 вопросов) ─── */
+gram: [
+  /* TO BE */
+  {t:'TO BE',q:'They ___ at school now.',o:['is','am','are','be'],a:2,e:'They → are (множественное число)'},
+  {t:'TO BE',q:'She ___ my best friend.',o:['am','are','is','be'],a:2,e:'She (= it, ед.ч. 3 л.) → is'},
+  {t:'TO BE',q:'___ you from Russia?',o:['Is','Am','Are','Be'],a:2,e:'You → Are (в вопросе: Are you...?)'},
+  /* Present Simple */
+  {t:'Present Simple',q:'He ___ to school every day.',o:['go','goes','going','is go'],a:1,e:'He/She/It → глагол + s: goes'},
+  {t:'Present Simple',q:'She always ___ books in the evening.',o:['read','reads','reading','is read'],a:1,e:'She → reads (Present Simple, 3-е лицо)'},
+  {t:'Present Simple',q:'They ___ like pizza.',o:["don't","doesn't","isn't","aren't"],a:0,e:'They/I/We/You → don\'t (отрицание)'},
+  {t:'Present Simple',q:'What ___ he eat for breakfast?',o:['do','does','is','are'],a:1,e:'Спец. вопрос с he → does'},
+  {t:'Present Simple',q:'Маркер Present Simple: She plays football ___',o:['every day','now','yesterday','at the moment'],a:0,e:'every day — маркер Present Simple'},
+  /* Present Continuous */
+  {t:'Present Continuous',q:'They ___ football right now.',o:['play','plays','are playing','is playing'],a:2,e:'right now = Present Continuous: They → are playing'},
+  {t:'Present Continuous',q:'Listen! She ___ (sing).',o:['sings','sing','is singing','are singing'],a:2,e:'Listen! → сейчас → is singing (она поёт)'},
+  {t:'Present Continuous',q:'swim + -ing = ?',o:['swiming','swimmed','swimming','swims'],a:2,e:'swim → swimming (удвоение согласной перед -ing)'},
+  {t:'PS vs PC',q:'She ___ books every evening. (обычно)',o:['is reading','reads','read','are reading'],a:1,e:'every evening = обычно → Present Simple: reads'},
+  {t:'PS vs PC',q:'Look! He ___ the dog now.',o:['walks','walk','is walking','are walking'],a:2,e:'Look! = сейчас → Present Continuous: is walking'},
+  /* Past Simple */
+  {t:'Past Simple',q:'Yesterday she ___ to the cinema.',o:['go','goes','went','is going'],a:2,e:'yesterday = прошлое → Past Simple: went (неправильный)'},
+  {t:'Past Simple',q:'He ___ his homework last night.',o:['do','does','did','is doing'],a:2,e:'last night = вчера → Past Simple: did'},
+  {t:'Past Simple',q:'Past Simple от "eat" — это...?',o:['eated','ate','eaten','eatted'],a:1,e:'eat → ate (неправильный глагол)'},
+  {t:'Past Simple',q:'TO BE в прошлом: "We ___ at home yesterday."',o:['was','were','are','been'],a:1,e:'We (множ.) → were в прошлом'},
+  /* Future */
+  {t:'Future Simple',q:'I ___ help you! (решение прямо сейчас)',o:['am going to','will','would','shall'],a:1,e:'Решение на месте → will + глагол'},
+  {t:'Going to',q:'She ___ visit London next summer. (запланировано)',o:['will','is going to','goes to','shall'],a:1,e:'Запланировано → is going to + глагол'},
+  /* Артикли */
+  {t:'Артикли',q:'I have ___ apple.',o:['a','an','the','—'],a:1,e:'apple начинается с гласного звука → an'},
+  {t:'Артикли',q:'She is ___ best student in the class.',o:['a','an','the','—'],a:2,e:'превосходная степень → the best'},
+  {t:'Артикли',q:'I live in ___ Russia.',o:['a','an','the','—'],a:3,e:'Названия стран — без артикля: Russia, France'},
+  /* Мн. число */
+  {t:'Мн. число',q:'One child — two ___.',o:['childs','childrens','children','child'],a:2,e:'child → children (исключение!)'},
+  {t:'Мн. число',q:'One tooth — two ___.',o:['tooths','teeth','toothes','tooth'],a:1,e:'tooth → teeth (исключение!)'},
+  {t:'Мн. число',q:'box → ___',o:['boxs','boxies','boxes','boxen'],a:2,e:'После x → +es: boxes'},
+  /* Some / Any / There is */
+  {t:'Some/Any',q:'Have you got ___ juice?',o:['some','any','no','a'],a:1,e:'Вопрос → any: Have you got any...?'},
+  {t:'Some/Any',q:'I have ___ apples. (несколько)',o:['any','some','no','a'],a:1,e:'Утверждение → some: I have some apples.'},
+  {t:'There is/are',q:'___ two cats on the sofa.',o:['There is','There are','It is','They are'],a:1,e:'два кота (мн. число) → There are'},
+  /* Модальные */
+  {t:'Модальные',q:'You ___ run in the corridor! (нельзя)',o:["mustn't","don't have to","can","must"],a:0,e:'mustn\'t = НЕЛЬЗЯ (запрет!)'},
+  {t:'Модальные',q:'You ___ come. It\'s optional. (не обязан)',o:["mustn't","don't have to","can't","must"],a:1,e:'don\'t have to = не обязан (но можно)'},
+],
+
+/* ─── DEGREES OF COMPARISON (20 вопросов) ─── */
+comp: [
+  /* Базовые правила */
+  {t:'Степени сравнения',q:'tall → сравнительная степень → ?',o:['more tall','tallest','taller','the tallest'],a:2,e:'Короткое прилагательное: tall → tall+er = taller'},
+  {t:'Степени сравнения',q:'tall → превосходная степень → ?',o:['tallest','the tallest','most tall','taller'],a:1,e:'Превосходная: the + tall+est = the tallest'},
+  {t:'Степени сравнения',q:'small → сравнительная → ?',o:['more small','smaller','the smallest','most small'],a:1,e:'small → smaller (короткое: +er)'},
+  {t:'Степени сравнения',q:'old → превосходная → ?',o:['more old','oldest','the oldest','most old'],a:2,e:'old → the oldest (the + короткое + est)'},
+  /* Удвоение согласной */
+  {t:'Степени сравнения ★',q:'big → сравнительная → ?',o:['biger','bigger','more big','bigest'],a:1,e:'big → bigger: короткое + согл. + гласн. + согл. → удвоение!'},
+  {t:'Степени сравнения ★',q:'hot → превосходная → ?',o:['hotest','the hottest','most hot','hotter'],a:1,e:'hot → the hottest (удвоение t перед -est)'},
+  {t:'Степени сравнения ★',q:'thin → сравнительная → ?',o:['thiner','thinner','more thin','the thinnest'],a:1,e:'thin → thinner (удвоение n: тонкий → тоньше)'},
+  /* -y → -ier */
+  {t:'Степени сравнения ★',q:'happy → сравнительная → ?',o:['happyer','more happy','happier','the happiest'],a:2,e:'happy → happier: -y → -ier (меняем y на i + er)'},
+  {t:'Степени сравнения ★',q:'funny → превосходная → ?',o:['the funniest','funniest','most funny','the funnyer'],a:0,e:'funny → the funniest (-y → -iest)'},
+  {t:'Степени сравнения ★',q:'easy → сравнительная → ?',o:['easyer','more easy','easier','most easy'],a:2,e:'easy → easier (-y → -ier: лёгкий → легче)'},
+  /* Длинные прилагательные */
+  {t:'Степени сравнения',q:'beautiful → сравнительная → ?',o:['beautifuler','more beautiful','beautifuller','beautifuliest'],a:1,e:'Длинные (3+ слога): more beautiful'},
+  {t:'Степени сравнения',q:'interesting → превосходная → ?',o:['interestingest','the most interesting','most interestingest','more interesting'],a:1,e:'Длинные: the most interesting'},
+  {t:'Степени сравнения',q:'difficult → сравнительная → ?',o:['difficulter','the most difficult','more difficult','difficultmost'],a:2,e:'difficult (3 слога) → more difficult'},
+  /* -e на конце */
+  {t:'Степени сравнения',q:'nice → сравнительная → ?',o:['niceer','nicer','more nice','nicier'],a:1,e:'nice → nicer (оканчивается на -e: убираем -e, +er)'},
+  {t:'Степени сравнения',q:'large → превосходная → ?',o:['largeer','the largest','the most large','largeest'],a:1,e:'large → the largest (-e убираем, +st)'},
+  /* Исключения! */
+  {t:'Исключения ★★',q:'good → сравнительная → ?',o:['gooder','more good','better','weller'],a:2,e:'good → BETTER (исключение! учи наизусть)'},
+  {t:'Исключения ★★',q:'good → превосходная → ?',o:['the goodest','the most good','the best','the better'],a:2,e:'good → the BEST (исключение!)'},
+  {t:'Исключения ★★',q:'bad → сравнительная → ?',o:['badder','more bad','worse','worser'],a:2,e:'bad → WORSE (исключение! учи наизусть)'},
+  {t:'Исключения ★★',q:'bad → превосходная → ?',o:['the baddest','the most bad','the worst','the badder'],a:2,e:'bad → the WORST (исключение!)'},
+  /* Предложения */
+  {t:'Степени в предложении',q:'Mary is ___ than Ann. (tall)',o:['tall','more tall','taller','the tallest'],a:2,e:'Сравниваем двух: Mary is TALLER than Ann.'},
+  {t:'Степени в предложении',q:'Tom is ___ in the class. (tall)',o:['taller','tall','more tall','the tallest'],a:3,e:'Среди всех: THE TALLEST in the class.'},
+  {t:'Степени в предложении',q:'This film is ___ than that one. (interesting)',o:['more interesting','interestinger','the most interesting','most interesting'],a:0,e:'interesting — длинное → more interesting'},
+  {t:'Степени в предложении',q:'She is ___ student in school. (good)',o:['the better','the gooder','the best','the most good'],a:2,e:'good → the BEST (исключение, превосходная)'},
+  {t:'Степени в предложении',q:'Today is ___ than yesterday. (hot)',o:['more hot','hoter','hotter','the hottest'],a:2,e:'hot → hotter (удвоение + er)'},
+  {t:'Степени сравнения',q:'Выбери правильное: "My bag is ___ than yours."',o:['heavier','more heavy','heavyer','the heaviest'],a:0,e:'heavy → heavier (-y → -ier: тяжелее)'},
+]
+
+};
+
+/* ── Quiz state ── */
+let qBank=[], qIdx=0, qScore=0, qAnswered=false, qCategory='all', qCorrectByTopic={}, qWrongByTopic={};
+
+function shuffle(arr){ return [...arr].sort(()=>Math.random()-.5); }
+
+function startQuiz(cat){
+  document.querySelectorAll('.qcat').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  qCategory = cat;
+  if(cat==='all') qBank = shuffle([...BANKS.vocab,...BANKS.gram,...BANKS.comp]);
+  else qBank = shuffle([...BANKS[cat]]);
+  qIdx=0; qScore=0; qAnswered=false; qCorrectByTopic={}; qWrongByTopic={};
+  document.getElementById('quiz-cats').style.display='none';
+  document.getElementById('quiz-result').style.display='none';
+  document.getElementById('quiz-arena').style.display='block';
+  renderQ();
+}
+
+function renderQ(){
+  const q = qBank[qIdx];
+  const total = qBank.length;
+  document.getElementById('qz-counter').textContent = `Вопрос ${qIdx+1} из ${total}`;
+  document.getElementById('qz-score').textContent = `✓ ${qScore}`;
+  document.getElementById('qz-bar').style.width = `${(qIdx/total)*100}%`;
+  document.getElementById('qz-tag').textContent = q.t;
+  document.getElementById('qz-q').textContent = q.q;
+  document.getElementById('qz-fb').style.display='none';
+  document.getElementById('qz-next').style.display='none';
+
+  const labels = ['A','B','C','D'];
+  const opts = document.getElementById('qz-opts');
+  opts.innerHTML='';
+  q.o.forEach((opt,i)=>{
+    const btn = document.createElement('button');
+    btn.className='qopt';
+    btn.innerHTML=`<span class="qopt-ck">${labels[i]}</span><span>${opt}</span>`;
+    btn.onclick=()=>checkAnswer(i, q.a, q.e, q.t);
+    opts.appendChild(btn);
+  });
+  qAnswered=false;
+  document.getElementById('qz-card').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function checkAnswer(chosen, correct, explanation, topic){
+  if(qAnswered) return;
+  qAnswered=true;
+  const btns = document.querySelectorAll('.qopt');
+  btns[correct].classList.add('reveal');
+  btns[correct].querySelector('.qopt-ck').textContent='✓';
+  if(chosen===correct){
+    qScore++;
+    btns[chosen].classList.add('correct');
+    qCorrectByTopic[topic]=(qCorrectByTopic[topic]||0)+1;
+    showFb(true, explanation);
+  } else {
+    btns[chosen].classList.add('wrong');
+    btns[chosen].querySelector('.qopt-ck').textContent='✗';
+    qWrongByTopic[topic]=(qWrongByTopic[topic]||0)+1;
+    showFb(false, explanation);
+  }
+  document.getElementById('qz-score').textContent=`✓ ${qScore}`;
+  document.getElementById('qz-next').style.display='block';
+  document.getElementById('qz-next').textContent = qIdx+1 < qBank.length ? 'Следующий вопрос →' : 'Посмотреть результат →';
+}
+
+function showFb(ok, text){
+  const el=document.getElementById('qz-fb');
+  el.style.display='block';
+  el.style.background = ok ? 'var(--lgrn)' : 'var(--lred)';
+  el.style.borderLeft = ok ? '3px solid var(--grn)' : '3px solid var(--red)';
+  el.style.color = ok ? 'var(--gt)' : 'var(--red)';
+  el.textContent = (ok ? '✓ Правильно! ' : '✗ Неверно. ') + text;
+}
+
+function nextQ(){
+  qIdx++;
+  if(qIdx >= qBank.length){ showResult(); return; }
+  renderQ();
+}
+
+function showResult(){
+  document.getElementById('quiz-arena').style.display='none';
+  const res = document.getElementById('quiz-result');
+  res.style.display='block';
+  const total=qBank.length, pct=Math.round(qScore/total*100);
+  const emoji = pct>=90?'🏆':pct>=70?'🎉':pct>=50?'💪':'📚';
+  const msg = pct>=90?'Отличный результат! Готов к ВПР!':pct>=70?'Хорошо! Повтори слабые темы.':pct>=50?'Неплохо! Ещё немного практики.':'Продолжай тренироваться!';
+  document.getElementById('qr-emoji').textContent=emoji;
+  document.getElementById('qr-score').textContent=`${qScore} из ${total} правильных (${pct}%)`;
+  document.getElementById('qr-msg').textContent=msg;
+  // Breakdown
+  const wrongTopics = Object.entries(qWrongByTopic).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  let bd = wrongTopics.length ? '<b>Повтори темы:</b><br>' + wrongTopics.map(([t,n])=>`• ${t} — ${n} ошибок`).join('<br>') : '<b>Ошибок нет — отлично!</b>';
+  document.getElementById('qr-breakdown').innerHTML=bd;
+  res.scrollIntoView({behavior:'smooth'});
+}
+
+function retryQuiz(){ startQuiz(qCategory); }
+
+function resetQuiz(){
+  document.getElementById('quiz-arena').style.display='block';
+  document.getElementById('quiz-result').style.display='none';
+  document.getElementById('quiz-cats').style.display='flex';
+  document.getElementById('qz-fb').style.display='none';
+  document.getElementById('qz-next').style.display='none';
+  document.getElementById('qz-card').querySelector('#qz-opts').innerHTML='';
+  document.getElementById('qz-q').textContent='';
+  document.getElementById('qz-tag').textContent='';
+  document.getElementById('qz-counter').textContent='';
+  document.getElementById('qz-score').textContent='✓ 0';
+  document.getElementById('qz-bar').style.width='0%';
+}
+
+/* Auto-start with 'all' on first visit */
+document.addEventListener('DOMContentLoaded', ()=>{ /* lazy start */ });
+</script>
+</body>
+</html>
